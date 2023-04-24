@@ -28,6 +28,7 @@ class Player(GameSprite):
             self.rect.y += self.speed
 platform1 = Player('platforma1.png',20,300,30,90,10)
 platform2 = Player('platforma2.png',930,300,30,90,10)
+ball = GameSprite('ball.png',470,330,50,50,5)
 game = True
 while game:
     clock.tick(60)
@@ -36,6 +37,7 @@ while game:
     platform1.reset()
     platform2.move()
     platform2.reset()
+    ball.reset()
     for e in event.get():
         if e.type == QUIT:
             game = False
